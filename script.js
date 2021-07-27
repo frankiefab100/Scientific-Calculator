@@ -1,4 +1,8 @@
 // Mathematical Operators
+function number(value) {
+  document.calculator.display.value += value;
+}
+
 function sin() {
   document.calculator.display.value = Math.sin(
     document.calculator.display.value
@@ -18,8 +22,9 @@ function tan() {
 }
 
 function squared() {
-  document.calculator.display.value = Math.SQRT2(
-    document.calculator.display.value
+  document.calculator.display.value = Math.pow(
+    document.calculator.display.value,
+    2
   );
 }
 
@@ -31,21 +36,19 @@ function cubed() {
 }
 
 function squareRoot() {
-  document.calculator.display.value = Math.pow(
-    document.calculator.display.value,
-    1 / 2
+  document.calculator.display.value = Math.sqrt(
+    document.calculator.display.value
   );
 }
 
 function cubeRoot() {
-  document.calculator.display.value = Math.pow(
-    document.calculator.display.value,
-    1 / 3
+  document.calculator.display.value = Math.cbrt(
+    document.calculator.display.value
   );
 }
 
-function log() {
-  document.calculator.display.value = Math.LN10(
+function log(value) {
+  document.calculator.display.value = Math.log10(
     document.calculator.display.value
   );
 }
@@ -74,8 +77,4 @@ function backspace() {
 
 function equal() {
   document.calculator.display.value = eval(document.calculator.display.value);
-}
-
-function number(value) {
-  document.calculator.display.value += value;
 }
